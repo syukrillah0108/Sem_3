@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p>Nama Kelompok</p>
+<ol>
+<li>Ade Gunawan</li>
+<li>M Fajar Syaffiqri</li>
+<li>Raka Aulia Rahman</li>
+<li>Syukrillah</li>
+</ol>
+<p>Kelas: TIF RP 222PA</p>
+<h1 id="metodel">Metodel</h1>
+<div style="text-align: justify;">
+<ul>
+<li>Waterfall: Model ini adalah model yang paling sederhana dan klasik dalam SDLC. Model ini menekankan fase-fase yang berurutan dan sistematis, seperti requirement gathering and analysis, design, implementation, integration and testing, verification, operation and maintenance. Model ini cocok untuk proyek dengan kompleksitas rendah dan kebutuhan yang jelas. Namun, model ini kurang fleksibel terhadap perubahan dan membutuhkan waktu dan biaya yang lebih lama.</li>
+<li>Prototyping: Model ini adalah model yang memungkinkan pengguna atau klien memiliki gambaran awal tentang perangkat lunak yang akan dikembangkan, serta melakukan pengujian di awal sebelum perangkat lunak dirilis. Model ini melibatkan tahapan seperti communication, quick plan, modeling quick design, construction of prototype, deployment delivery and feedback, dan refinement. Model ini cocok untuk proyek dengan kebutuhan yang tidak jelas atau sering berubah. Namun, model ini dapat menyebabkan kesulitan dalam dokumentasi dan manajemen kode.</li>
+<li>Rapid Application Development Model: Model ini adalah model yang berfokus pada pengembangan perangkat lunak secara cepat dengan menggunakan teknik-teknik seperti prototyping, reusability, time boxing, dan user involvement. Model ini melibatkan tahapan seperti business modeling, data modeling, process modeling, application generation, testing and turnover. Model ini cocok untuk proyek dengan waktu yang singkat dan kebutuhan yang fleksibel. Namun, model ini membutuhkan sumber daya yang cukup dan keterampilan yang tinggi dari tim pengembang.</li>
+</ul>
+<h1 id="studi-kasus">Studi Kasus</h1>
+<pre><code>Sebuah universitas ingin mengembangkan sistem informasi akademik untuk mengelola data mahasiswa, dosen, dan mata kuliah. Sistem ini akan digunakan untuk berbagai keperluan, seperti pendaftaran mahasiswa, penjadwalan mata kuliah, dan pencatatan nilai.
+</code></pre>
+<p><strong>Tahap Perencanaan</strong></p>
+<pre><code>Pada tahap perencanaan, dilakukan pengumpulan kebutuhan sistem, analisis kebutuhan, dan penyusunan proposal pengembangan sistem. Hasil dari tahap ini adalah dokumen proposal yang berisi kebutuhan sistem, analisis kebutuhan, dan rencana pengembangan sistem.
+</code></pre>
+<p><strong>Tahap Perancangan</strong></p>
+<pre><code>Pada tahap perancangan, dilakukan perancangan arsitektur sistem, perancangan basis data, perancangan antarmuka pengguna, dan perancangan dokumentasi. Hasil dari tahap ini adalah dokumen desain yang berisi arsitektur sistem, basis data, antarmuka pengguna, dan dokumentasi.
+</code></pre>
+<p><strong>Tahap Implementasi</strong></p>
+<pre><code>Pada tahap implementasi, dilakukan pembangunan sistem, pengujian sistem, dan instalasi sistem. Hasil dari tahap ini adalah sistem informasi akademik yang siap digunakan.
+</code></pre>
+<p><strong>Tahap Pengujian</strong></p>
+<pre><code>Pada tahap pengujian, dilakukan pengujian fungsionalitas, pengujian kinerja, dan pengujian keamanan. Hasil dari tahap ini adalah sistem informasi akademik yang telah memenuhi kebutuhan pengguna.
+</code></pre>
+<p><strong>Tahap Pemeliharaan</strong></p>
+<pre><code>Pada tahap pemeliharaan, dilakukan perbaikan bug, penambahan fitur baru, dan peningkatan kinerja sistem. Hasil dari tahap ini adalah sistem informasi akademik yang tetap dapat berfungsi dengan baik.
+</code></pre>
+<h1 id="penjelasan">Penjelasan</h1>
+<ol>
+<li>
+<p>Tahap Perencanaan:</p>
+<ul>
+<li>Pengumpulan kebutuhan sistem: Identifikasi kebutuhan dasar sistem, seperti manajemen data mahasiswa, dosen, dan mata kuliah.</li>
+<li>Analisis kebutuhan: Mendalami kebutuhan pengguna dan tujuan sistem, seperti pendaftaran mahasiswa, penjadwalan mata kuliah, dan pencatatan nilai.</li>
+<li>Penyusunan proposal: Membuat dokumen proposal yang berisi kebutuhan, analisis kebutuhan, dan rencana pengembangan sistem.</li>
+</ul>
+</li>
+<li>
+<p>Tahap Perancangan:</p>
+<ul>
+<li>Perancangan arsitektur sistem: Merancang struktur keseluruhan sistem, termasuk komponen-komponen utama dan aliran data.</li>
+<li>Perancangan basis data: Membuat desain database yang mencakup entitas seperti mahasiswa, dosen, dan mata kuliah.</li>
+<li>Perancangan antarmuka pengguna: Menentukan tampilan dan interaksi pengguna dengan sistem.</li>
+<li>Perancangan dokumentasi: Menyiapkan panduan pengguna dan dokumentasi teknis.</li>
+</ul>
+</li>
+<li>
+<p>Tahap Implementasi:</p>
+<ul>
+<li>Pembangunan sistem: Membangun sistem berdasarkan desain yang telah dibuat, termasuk pengkodean aplikasi.</li>
+<li>Pengujian sistem: Melakukan pengujian untuk memastikan bahwa sistem berfungsi dengan baik dan sesuai dengan spesifikasi.</li>
+<li>Instalasi sistem: Memasang dan mengonfigurasi sistem di lingkungan produksi.</li>
+</ul>
+</li>
+<li>
+<p>Tahap Pengujian:</p>
+<ul>
+<li>Pengujian fungsionalitas: Memeriksa apakah sistem memenuhi fungsionalitas yang diinginkan, seperti pendaftaran mahasiswa dan pencatatan nilai.</li>
+<li>Pengujian kinerja: Mengukur kinerja sistem, termasuk respons waktu dan kapasitas.</li>
+<li>Pengujian keamanan: Memeriksa keamanan sistem untuk melindungi data sensitif.</li>
+</ul>
+</li>
+<li>
+<p>Tahap Pemeliharaan:</p>
+<ul>
+<li>Perbaikan bug: Memperbaiki masalah dan kesalahan yang mungkin muncul dalam penggunaan sistem.</li>
+<li>Penambahan fitur baru: Menambahkan fitur baru berdasarkan permintaan pengguna atau perubahan kebutuhan.</li>
+<li>Peningkatan kinerja: Melakukan perubahan untuk meningkatkan kinerja dan efisiensi sistem.</li>
+</ul>
+</li>
+</ol>
+<p>Setelah melalui semua tahap ini, sistem informasi akademik akan siap digunakan dan dapat dikelola dan dipelihara secara berkelanjutan sesuai kebutuhan dan perubahan.</p>
+<h1 id="kecocokan-model">Kecocokan Model</h1>
+<p>Pasa Studi Kasus di atas, dapat di cocokan dengan model <strong><code>Water Fall</code></strong>, Berikut adalah beberapa alasan mengapa studi kasus tersebut sesuai dengan model waterfall:</p>
+<ol>
+<li>
+<p><strong>Sekuensial dan Linier</strong>: Model waterfall adalah model pengembangan sekuensial dan linier di mana setiap tahap harus diselesaikan sebelum melanjutkan ke tahap berikutnya. Dalam studi kasus ini, tahapan pengembangan sistem, seperti perencanaan, perancangan, implementasi, pengujian, dan pemeliharaan, dijalani secara berurutan dan tidak ada overlap antara tahap-tahap tersebut.</p>
+</li>
+<li>
+<p><strong>Dokumen Terinci</strong>: Model waterfall mewajibkan dokumentasi yang terinci untuk setiap tahap. Dalam studi kasus ini, dokumen proposal perencanaan, dokumen desain, dan dokumen dokumentasi digunakan untuk mendokumentasikan setiap tahap pengembangan dengan baik.</p>
+</li>
+<li>
+<p><strong>Tahap Bergantung pada Tahap Sebelumnya</strong>: Dalam model waterfall, setiap tahap bergantung pada kelengkapan dan keberhasilan tahap sebelumnya. Misalnya, perancangan bergantung pada hasil dari tahap perencanaan, dan implementasi bergantung pada hasil dari tahap perancangan. Ini berarti setiap tahap harus diselesaikan dengan baik sebelum melanjutkan.</p>
+</li>
+<li>
+<p><strong>Pengujian Akhir</strong>: Model waterfall mengatur pengujian sebagai tahap tersendiri yang dilakukan setelah tahap implementasi. Dalam studi kasus ini, tahap pengujian adalah bagian penting dan dijalankan secara terpisah setelah tahap implementasi untuk memastikan kehandalan sistem sebelum dioperasikan.</p>
+</li>
+<li>
+<p><strong>Tahap Pemeliharaan Terpisah</strong>: Model waterfall mengakui pentingnya pemeliharaan sistem sebagai tahap terpisah. Dalam studi kasus ini, tahap pemeliharaan didefinisikan secara eksplisit untuk menangani perbaikan bug, penambahan fitur baru, dan peningkatan kinerja sistem setelah sistem telah diimplementasikan.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>
