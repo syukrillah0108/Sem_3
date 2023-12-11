@@ -21,3 +21,11 @@ Berikut beberapa konsep penting dalam basis data terdistribusi:
 9. **Keamanan**: Keamanan data sangat penting dalam basis data terdistribusi, terutama ketika data bergerak melalui jaringan yang rentan terhadap ancaman keamanan.
 
 Basis data terdistribusi memiliki banyak manfaat, tetapi juga memerlukan perencanaan, manajemen, dan pemeliharaan yang cermat untuk memastikan operasi yang lancar dan konsistensi data di seluruh sistem.
+
+# Materi Transparansi dan standarisasi asis data terdistribusi
+1. 
+2. Standari sasi data
+3. ansi/sparc
+
+# Tugas
+Jenis - jenis topologi jaringan dan gambar skemanya
