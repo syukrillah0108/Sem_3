@@ -88,153 +88,168 @@ COUNT 83437
 
 System:
 
-    Kernel: 6.1.0-13-amd64 [6.1.55-1] arch: x86_64 bits: 64 compiler: gcc v: 12.2.0
-        parameters: BOOT_IMAGE=/boot/vmlinuz-6.1.0-13-amd64 root=UUID=`<filter>` ro quiet splash
-    Desktop: Xfce v: 4.18.1 tk: Gtk v: 3.24.36 info: xfce4-panel wm: xfwm v: 4.18.0 vt: 7
-        dm: LightDM v: 1.26.0 Distro: MX-23.1_x64 Libretto July 31  2023 base: Debian GNU/Linux 12
-        (bookworm)
+    Kernel: 5.15.0-76-generic x86_64 bits: 64 compiler: gcc v: 11.3.0 Desktop: Xfce 4.18.1
+    
+    tk: Gtk 3.24.33 wm: xfwm dm: LightDM Distro: Linux Mint 21.2 Victoria base: Ubuntu 22.04 jammy
+
 
 Machine:
 
     Type: Laptop System: LENOVO product: 81ST v: Lenovo IdeaPad S145-14AST
-        serial:`<superuser required>` Chassis: type: 10 v: Lenovo IdeaPad S145-14AST
-        serial: `<superuser required>`
-    Mobo: LENOVO model: LNVNB161216 v: SDK0Q55754WIN serial: `<superuser required>` UEFI: LENOVO
-        v: AYCN21WW date: 03/05/2020
+    
+    serial: <superuser required> Chassis: type: 10 v: Lenovo IdeaPad S145-14AST
+    
+    serial: <superuser required>
+    
+    Mobo: LENOVO model: LNVNB161216 v: SDK0Q55754WIN serial: <superuser required> UEFI: LENOVO
+    
+    v: AYCN21WW date: 03/05/2020
 
 Battery:
 
-    ID-1: BAT0 charge: 26.9 Wh (99.3%) condition: 27.1/30.6 Wh (88.5%) volts: 8.1 min: 7.6
-        model: CPT-COS L16C2PB2 type: Li-poly serial:`<filter>` status: discharging
+    ID-1: BAT0 charge: 13.6 Wh (54.8%) condition: 24.8/30.6 Wh (81.1%) volts: 7.5 min: 7.6
+    
+    model: CPT-COS L16C2PB2 serial: <filter> status: Discharging
 
 CPU:
 
-    Info: model: AMD A4-9125 RADEON R3 4 COMPUTE CORES 2C+2G bits: 64 type: MCP arch: Excavator
-        level: v3 note: check built: 2015 process: GF 28nm family: 0x15 (21) model-id: 0x70 (112)
-        stepping: 0 microcode: 0x6006705
-    Topology: cpus: 1x cores: 2 smt:`<unsupported>` cache: L1: 192 KiB desc: d-2x32 KiB; i-2x64 KiB
-        L2: 2 MiB desc: 2x1024 KiB
-    Speed (MHz): avg: 1497 min/max: 1300/2300 boost: enabled scaling: driver: acpi-cpufreq
-        governor: ondemand cores: 1: 1497 2: 1497 bogomips: 9182
+    Info: dual core model: AMD A4-9125 RADEON R3 4 COMPUTE CORES 2C+2G bits: 64 type: MCP
+    
+    arch: Excavator rev: 0 cache: L1: 192 KiB L2: 2 MiB
+    
+    Speed (MHz): avg: 2096 min/max: 1300/2300 boost: enabled cores: 1: 2096 2: 2096 bogomips: 9182
+    
     Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 svm
-    Vulnerabilities:
-    Type: gather_data_sampling status: Not affected
-    Type: itlb_multihit status: Not affected
-    Type: l1tf status: Not affected
-    Type: mds status: Not affected
-    Type: meltdown status: Not affected
-    Type: mmio_stale_data status: Not affected
-    Type: retbleed mitigation: untrained return thunk; SMT disabled
-    Type: spec_rstack_overflow status: Not affected
-    Type: spec_store_bypass mitigation: Speculative Store Bypass disabled via prctl
-    Type: spectre_v1 mitigation: usercopy/swapgs barriers and __user pointer sanitization
-    Type: spectre_v2 mitigation: Retpolines, IBPB: conditional, STIBP: disabled, RSB filling,
-        PBRSB-eIBRS: Not affected
-    Type: srbds status: Not affected
-    Type: tsx_async_abort status: Not affected
 
 Graphics:
 
     Device-1: AMD Stoney [Radeon R2/R3/R4/R5 Graphics] vendor: Lenovo driver: amdgpu v: kernel
-        arch: GCN-3 code: Volcanic Islands process: TSMC 28nm built: 2014-19 ports: active: eDP-1
-        empty: HDMI-A-1 bus-ID: 00:01.0 chip-ID: 1002:98e4 class-ID: 0300
-    Device-2: IMC Networks Integrated Camera type: USB driver: uvcvideo bus-ID: 1-1.3:4
-        chip-ID: 13d3:5a08 class-ID: 0e02 serial:`<filter>`
-    Display: x11 server: X.Org v: 1.21.1.7 compositor: xfwm v: 4.18.0 driver: X: loaded: amdgpu
-        unloaded: fbdev,modesetting,vesa dri: radeonsi gpu: amdgpu display-ID: :0.0 screens: 1
-    Screen-1: 0 s-res: 1366x768 s-dpi: 96 s-size: 361x203mm (14.21x7.99") s-diag: 414mm (16.31")
-    Monitor-1: eDP-1 mapped: eDP model: AU Optronics 0x723c built: 2017 res: 1366x768 hz: 60
-        dpi: 112 gamma: 1.2 size: 309x173mm (12.17x6.81") diag: 354mm (13.9") ratio: 16:9 modes:
-        max: 1366x768 min: 640x480
-    API: OpenGL v: 4.5 Mesa 22.3.6 renderer: AMD Radeon R3 Graphics (stoney LLVM 15.0.6 DRM 3.49
-        6.1.0-13-amd64) direct-render: Yes
+    
+    ports: active: eDP-1 empty: HDMI-A-1 bus-ID: 00:01.0 chip-ID: 1002:98e4
 
+    Device-2: IMC Networks Integrated Camera type: USB driver: uvcvideo bus-ID: 1-1.3:4
+    
+    chip-ID: 13d3:5a08
+    
+    Display: x11 server: X.Org v: 1.21.1.4 compositor: xfwm v: 4.18.0 driver: X:
+    
+    loaded: amdgpu,ati unloaded: fbdev,modesetting,vesa gpu: amdgpu display-ID: :0.0 screens: 1
+    
+    Screen-1: 0 s-res: 1366x768 s-dpi: 96
+    
+    Monitor-1: eDP res: 1366x768 dpi: 112 diag: 354mm (13.9")
+  
+    OpenGL: renderer: STONEY (stoney LLVM 15.0.7 DRM 3.42 5.15.0-76-generic)
+    v: 4.5 Mesa 23.0.4-0ubuntu1~22.04.1 direct render: Yes
 Audio:
 
     Device-1: AMD vendor: Lenovo driver: snd_hda_intel v: kernel bus-ID: 00:01.1 chip-ID: 1002:15b3
-        class-ID: 0403
+    
     Device-2: AMD Family 15h Audio vendor: Lenovo driver: snd_hda_intel v: kernel bus-ID: 00:09.2
-        chip-ID: 1022:157a class-ID: 0403
-    API: ALSA v: k6.1.0-13-amd64 status: kernel-api tools: alsamixer,amixer
-    Server-1: PipeWire v: 0.3.65 status: active (process) with: 1: pipewire-pulse status: active
-        2: wireplumber status: active tools: pw-cat,pw-cli,wpctl
-    Server-2: PulseAudio v: 16.1 status: active tools: pacat,pactl,pavucontrol
+    chip-ID: 1022:157a
+
+    Sound Server-1: ALSA v: k5.15.0-76-generic running: yes
+    Sound Server-2: PulseAudio v: 15.99.1 running: yes
+    
+    Sound Server-3: PipeWire v: 0.3.48 running: yes
 
 Network:
 
     Device-1: Qualcomm Atheros QCA9377 802.11ac Wireless Network Adapter vendor: Lenovo
-        driver: ath10k_pci v: kernel modules: wl pcie: gen: 1 speed: 2.5 GT/s lanes: 1 bus-ID: 02:00.0
-        chip-ID: 168c:0042 class-ID: 0280
-    IF: wlan0 state: down mac:`<filter>`
+    
+    driver: ath10k_pci v: kernel pcie: speed: 2.5 GT/s lanes: 1 bus-ID: 02:00.0 chip-ID: 168c:0042
+
+    IF: wlp2s0 state: up mac: <filter>
 
 Bluetooth:
 
     Device-1: Qualcomm Atheros type: USB driver: btusb v: 0.8 bus-ID: 1-1.2:3 chip-ID: 0cf3:e500
-        class-ID: e001
-    Report: hciconfig ID: hci0 rfk-id: 3 state: down bt-service: N/A rfk-block: hardware: no
-        software: yes address:`<filter>`
-    Info: acl-mtu: 1024:8 sco-mtu: 50:8 link-policy: rswitch hold sniff
-        link-mode: peripheral accept
+    
+    Report: hciconfig ID: hci0 rfk-id: 2 state: down bt-service: enabled,running rfk-block:
+    
+    hardware: no software: yes address: <filter>
 
 Drives:
-
-    Local Storage: total: 238.47 GiB used: 68.09 GiB (28.6%)
-    SMART Message: Unable to run smartctl. Root privileges required.
-    ID-1: /dev/sda maj-min: 8:0 model: JOINT SATA 2.5 SSD H500 256GB size: 238.47 GiB block-size:
-        physical: 512 B logical: 512 B speed: 6.0 Gb/s type: SSD serial:`<filter>` rev: A25C scheme: GPT
+    Local Storage: total: 238.47 GiB used: 33.81 GiB (14.2%)
+    ID-1: /dev/sda model: JOINT SATA 2.5 SSD H500 256GB size: 238.47 GiB speed: 6.0 Gb/s
+    
+    serial: <filter>
 
 Partition:
-
-    ID-1: / raw-size: 160.1 GiB size: 156.53 GiB (97.77%) used: 68.06 GiB (43.5%) fs: ext4
-        dev: /dev/sda2 maj-min: 8:2
-    ID-2: /boot/efi raw-size: 256 MiB size: 252 MiB (98.46%) used: 28.6 MiB (11.3%) fs: vfat
-        dev: /dev/sda1 maj-min: 8:1
+  
+  ID-1: / size: 156.53 GiB used: 33.77 GiB (21.6%) fs: ext4 dev: /dev/sda4
+  
+  ID-2: /boot/efi size: 252 MiB used: 40.6 MiB (16.1%) fs: vfat dev: /dev/sda1
 
 Swap:
 
-    Kernel: swappiness: 15 (default 60) cache-pressure: 100 (default)
-    ID-1: swap-1 type: file size: 2 GiB used: 11 MiB (0.5%) priority: -2 file: /swap/swap
+    ID-1: swap-1 type: file size: 2 GiB used: 59.5 MiB (2.9%) priority: -2 file: /swapfile
+
+USB:
+
+    Hub-1: 1-0:1 info: Full speed or root hub ports: 2 rev: 2.0 speed: 480 Mb/s chip-ID: 1d6b:0002
+    
+    Hub-2: 1-1:2 info: Advanced Micro Devices Root Hub ports: 4 rev: 2.0 speed: 480 Mb/s
+    
+    chip-ID: 0438:7900
+    
+    Device-1: 1-1.2:3 info: Qualcomm Atheros type: Bluetooth driver: btusb rev: 2.0 speed: 12 Mb/s
+    
+    chip-ID: 0cf3:e500
+    
+    Device-2: 1-1.3:4 info: IMC Networks Integrated Camera type: Video driver: uvcvideo rev: 2.0
+    
+    speed: 480 Mb/s chip-ID: 13d3:5a08
+    
+    Device-3: 1-1.4:5 info: China Resource Semico Keyboard type: Keyboard,HID
+    
+    driver: hid-generic,usbhid rev: 1.1 speed: 1.5 Mb/s chip-ID: 1a2c:2124
+    Hub-3: 2-0:1 info: Hi-speed hub with single TT ports: 4 rev: 2.0 speed: 480 Mb/s
+    
+    chip-ID: 1d6b:0002
+  
+    Device-1: 2-1:2 info: SHARKOON GmbH [Mediatrack Edge Mini Keyboard] type: Keyboard,Mouse
+    
+    driver: hid-generic,usbhid rev: 1.1 speed: 12 Mb/s chip-ID: 1ea7:0066
+    
+    Hub-4: 3-0:1 info: Super-speed hub ports: 4 rev: 3.0 speed: 5 Gb/s chip-ID: 1d6b:0003
 
 Sensors:
 
-    System Temperatures: cpu: 44.5 C mobo: N/A gpu: amdgpu temp: 44.0 C
+    System Temperatures: cpu: 56.4 C mobo: N/A gpu: amdgpu temp: 56.0 C
+    
     Fan Speeds (RPM): N/A
 
 Repos:
-
-    Packages: pm: dpkg pkgs: 3029 libs: 1480 tools: apt,apt-get,aptitude,nala,synaptic pm: rpm
-        pkgs: 0 pm: flatpak pkgs: 0
+    Packages: apt: 2416
+    
     No active apt repos in: /etc/apt/sources.list
-    Active apt repos in: /etc/apt/sources.list.d/chrome-remote-desktop.list
-        1: deb [arch=amd64] http://dl.google.com/linux/chrome-remote-desktop/deb/ stable main
-    Active apt repos in: /etc/apt/sources.list.d/debian-stable-updates.list
-        1: deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
-    Active apt repos in: /etc/apt/sources.list.d/debian.list
-        1: deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
-        2: deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+    
     Active apt repos in: /etc/apt/sources.list.d/microsoft-edge.list
-        1: deb [arch=amd64] https://packages.microsoft.com/repos/edge/ stable main
-    Active apt repos in: /etc/apt/sources.list.d/mx.list
-        1: deb http://mirrors.rit.edu/mxlinux/mx-packages/mx/repo/ bookworm main non-free
-    Active apt repos in: /etc/apt/sources.list.d/playonlinux.list
-        1: deb [signed-by=/usr/share/keyrings/playonlinux-archive-keyring.gpg] http://deb.playonlinux.com/ stretch main
-    Active apt repos in: /etc/apt/sources.list.d/teamviewer.list
-        1: deb [signed-by=/usr/share/keyrings/teamviewer-keyring.gpg] https://linux.teamviewer.com/deb stable main
+        1: deb [arch=amd64] https: //packages.microsoft.com/repos/edge/ stable main
+    
+    Active apt repos in: /etc/apt/sources.list.d/obsproject-obs-studio-jammy.list
+        1: deb [signed-by=/etc/apt/keyrings/obsproject-obs-studio-jammy.gpg] https: //ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu jammy main
+    
+    Active apt repos in: /etc/apt/sources.list.d/official-package-repositories.list
+        1: deb http: //packages.linuxmint.com victoria main upstream import backport
+        2: deb http: //archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+        3: deb http: //archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+        4: deb http: //archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+        5: deb http: //security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+    
     Active apt repos in: /etc/apt/sources.list.d/vscode.list
-        1: deb [arch=amd64,arm64,armhf] http://packages.microsoft.com/repos/code stable main
-
+        1: deb [arch=amd64,arm64,armhf] http: //packages.microsoft.com/repos/code stable main
 Info:
 
-    Processes: 246 Uptime: 13m wakeups: 16999 Memory: 3.22 GiB used: 2.75 GiB (85.3%) Init: SysVinit
-    v: 3.06 runlevel: 5 default: graphical tool: systemctl Compilers: gcc: 12.2.0 alt: 12
-    clang: 14.0.6 Client: shell wrapper v: 5.2.15-release inxi: 3.3.26
+    Processes: 253 Uptime: 1h 24m Memory: 3.22 GiB used: 2.21 GiB (68.6%) Init: systemd v: 249
+    
+    runlevel: 5 Compilers: gcc: 11.3.0 alt: 11/12 Client: Unknown python3.10 client inxi: 3.3.13
 
-Boot Mode: UEFI
 
 DBMS:
 
     database: Sqlite3
-    management: MySQL Shell for VS Code
 
 # Eksekusi
 
