@@ -170,6 +170,7 @@ Bluetooth:
     hardware: no software: yes address: <filter>
 
 Drives:
+    
     Local Storage: total: 238.47 GiB used: 33.81 GiB (14.2%)
     ID-1: /dev/sda model: JOINT SATA 2.5 SSD H500 256GB size: 238.47 GiB speed: 6.0 Gb/s
     
@@ -177,9 +178,9 @@ Drives:
 
 Partition:
   
-  ID-1: / size: 156.53 GiB used: 33.77 GiB (21.6%) fs: ext4 dev: /dev/sda4
+    ID-1: / size: 156.53 GiB used: 33.77 GiB (21.6%) fs: ext4 dev: /dev/sda4
   
-  ID-2: /boot/efi size: 252 MiB used: 40.6 MiB (16.1%) fs: vfat dev: /dev/sda1
+    ID-2: /boot/efi size: 252 MiB used: 40.6 MiB (16.1%) fs: vfat dev: /dev/sda1
 
 Swap:
 
